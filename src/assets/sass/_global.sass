@@ -1,0 +1,84 @@
+h1.title
+    font-size: 28px;
+    font-weight: bold;
+    color: $base-color;
+    line-height: 34px;
+    margin-top: 31px;
+    margin-bottom: 38px;
+
+.form-field
+    width: 100%;
+    &.twin 
+        display: flex;
+    
+input
+    border: none;
+    width: 100%;
+    padding: 15px 15px 10px 15px;
+    line-height: 1.25;
+    font-size: 16px;
+    font-weight: 500;
+    font-family: $base-font;
+    &:focus
+        border: none;
+        outline: none;
+        border-radius: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+    &[type='number']
+        -moz-appearance: textfield;
+        &::-webkit-outer-spin-button, &::-webkit-inner-spin-button
+            -webkit-appearance: none;
+            -moz-appearance: none;
+    &[readonly], &[readonly='readonly']
+        cursor: default;
+select
+    background-color: $white-color;
+    border-radius: 0px;
+    padding: 15px 30px 10px 15px;
+    font-size: 16px;
+    line-height: 1.25;
+    display: block;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url(../../assets/images/icons/down-arrow.svg);
+    background-position: right 10px top 55%;
+    background-repeat: no-repeat;
+    background-size: 13px;
+    
+    &::-ms-expand
+        display: none;
+    &:focus
+        outline: none;
+        border-radius: 0;
+        -webkit-box-shadow: none;
+        box-shadow: none;
+
+button
+    cursor: pointer;
+
+span
+    display: inline-block;
+    vertical-align: middle;
+
+.btn
+    text-align: center;
+    font-weight: bold;
+    font-family: $base-font;
+    padding: 15px;
+    color: $base-color;
+    letter-spacing: 0.94px;
+    &:focus
+        color: inherit;
+    &.btn--block
+        color: $white-color;
+        background-color: $base-color;
+    &.btn--outline
+        border: 2px solid $secondary-color;
+    
+    @media #{$breakpoint-tablet}
+        &.btn--outline
+            border: none;
